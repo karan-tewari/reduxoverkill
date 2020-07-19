@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter} from 'react-router-dom';
+
 import {createStore} from 'redux';
 import rootReducer from './reducers/index';
 import {Provider} from 'react-redux';
@@ -14,9 +17,11 @@ const store = createStore(
   )
 
 ReactDOM.render(
-<Provider store={store}>
-  <App />
-</Provider>
+<BrowserRouter>
+  <Provider store={store}>
+    <App />
+  </Provider>
+</BrowserRouter>
 ,document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
