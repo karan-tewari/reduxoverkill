@@ -1,12 +1,11 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import FourOhFour from './FourOhFour';
+import Navbar from './Navbar';
 
 const Dashboard = () => {
     return(
         <div>
+            <Navbar />
             <h1>This is Dashboard component</h1>
-            <Route path="/404" component={FourOhFour} />
         </div>
     )
 }

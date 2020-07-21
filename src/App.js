@@ -1,13 +1,14 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 function App() {
-
-
-
   return (
     <div className="App">
-      <Route path="/" component={Login} />
+      <Switch>
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={Login} />
+      </Switch>
     </div>
   );
 }
