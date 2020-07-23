@@ -2,12 +2,16 @@ import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import FourOFour from './components/FourOFour';
+import Welcome from './components/Welcome';
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/" component={Login} />
+        <Route path="/dashboard" exact component={Dashboard} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/" component={Welcome}/>
+        <Route component={FourOFour} />
       </Switch>
     </div>
   );

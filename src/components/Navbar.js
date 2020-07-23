@@ -19,7 +19,7 @@ class MyNavbar extends Component {
 
         const handleLogout = () => {
             this.props.isLogged();
-            this.props.history.push("/login");
+            this.props.history.push("/");
         }
 
         return (

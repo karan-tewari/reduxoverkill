@@ -1,7 +1,7 @@
 const isLogged = ( state = false, action ) => {
     switch(action.type){
         case "SIGNIN" : 
-            return !state;
+            return true;
         case "SIGNOUT" : 
             return false;
         default : 
