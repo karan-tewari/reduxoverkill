@@ -12,8 +12,8 @@ import {withRouter} from 'react-router-dom';
 class Login extends Component{
 
     state = {
-        emailValue : "",
-        pswdVal : "",
+        emailValue : "admin",
+        pswdVal : "admin",
         showError : undefined,
         visible:true,
     }
@@ -84,7 +84,12 @@ class Login extends Component{
                                 />
                             </FormGroup>
                             <Button color="primary" onClick={() => this.handleSubmit()}>Submit</Button>
-                            {this.state.showError ? <Alert color="danger" isOpen={this.state.visible} toggle={this.handleDismiss}> I am an alert and I can be dismissed!</Alert> : ""}
+                            {this.state.showError ? 
+                                <Alert color="danger" isOpen={this.state.visible} toggle={this.handleDismiss}>
+                                    Please enter correct email and password 
+                                </Alert> : 
+                                ""
+                            }
                         </Form>
                     </div>
                 </div>
