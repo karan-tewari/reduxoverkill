@@ -33,7 +33,7 @@ class MyNavbar extends Component {
                 navbar>
                   <Nav className="mr-auto" navbar>
                     <NavItem>
-                      <NavLink href="/components/">Components</NavLink>
+                      <NavLink onClick={() => this.props.history.push('/movies')}>Movies</NavLink>
                     </NavItem>
                     <NavItem>
                       <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>

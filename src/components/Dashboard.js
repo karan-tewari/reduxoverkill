@@ -4,15 +4,17 @@ import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
 
 const Dashboard = (props) => {
-    // console.log(props, "props")
+    console.log(props, "props")
     if(props.isLogged === false){
         return <Redirect to="/login"/>
     }
     return(
         <div>
-            <Navbar />
-            <h1>This is Dashboard component</h1>
-            <h2>{props.isLogged}</h2>
+            <div>
+                <Navbar />
+                <h1>This is Dashboard component</h1>
+                <h2>{props.isLogged}</h2>
+            </div>
         </div>
     )
 }

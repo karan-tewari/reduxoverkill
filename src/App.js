@@ -4,13 +4,16 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import FourOFour from './components/FourOFour';
 import Welcome from './components/Welcome';
+import MovieContainer from './components/MovieContainer';
+
 function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path="/movies" exact component={MovieContainer} />
         <Route path="/dashboard" exact component={Dashboard} />
         <Route path="/login" exact component={Login} />
-        <Route path="/" component={Welcome}/>
+        <Route path="/" exact component={Welcome}/>
         <Route component={FourOFour} />
       </Switch>
     </div>
