@@ -33,10 +33,10 @@ class MyNavbar extends Component {
                 navbar>
                   <Nav className="mr-auto" navbar>
                     <NavItem>
-                      <NavLink onClick={() => this.props.history.push('/movies')}>Movies</NavLink>
+                      <NavLink onClick={() => this.props.history.push('/dashboard')}>Dashboard</NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                      <NavLink onClick={() => this.props.history.push('dashboard/movies')}>Movies</NavLink>
                     </NavItem>
                   </Nav>
                   <NavbarText onClick={() => handleLogout()}>Logout</NavbarText>
