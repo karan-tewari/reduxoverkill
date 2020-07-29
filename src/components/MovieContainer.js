@@ -22,10 +22,7 @@ class MovieContainer extends Component{
             console.log(res);
         })
     }
-
     render(){
-        
-
         return(
             <div>
                 <MovieNavbar />
